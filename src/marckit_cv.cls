@@ -11,7 +11,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
 \RequirePackage{fontspec}
-\RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry}
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
 \RequirePackage{mfirstuc}
@@ -38,7 +38,6 @@
 \newcommand*{\setcontactperson}[1]{\def\@contactperson{#1}}
 \newcommand*{\setclaimedposition}[1]{\def\@claimedposition{#1}}
 
-
 \hypersetup{
   colorlinks=true,
   urlcolor=darkgray,
@@ -47,7 +46,6 @@
 % View commands
 % Header
 
-%
 \newcommand\headerview{
   \begin{minipage}{0.25\linewidth}
     \profpic{0.22}{images/profilepicture}
@@ -62,32 +60,31 @@
 %profilpicture
 
 \newsavebox{\picbox}
-\newcommand{\profpic}[2]{%
-  \savebox{\picbox}{%
-    \includegraphics[scale=#1]{#2}}%
-  \tikz\node [draw, circle,%
-    line width=4pt, color=white,%
-    minimum width=\wd\picbox,minimum height=\ht\picbox,%
-    path picture={ \node at (path picture bounding box.center)%
-        {\usebox{\picbox}};}]%
-  {};}
+\newcommand{\profpic}[2]{
+  \savebox{\picbox}{\includegraphics[scale=#1]{#2}}
+  \tikz\node [draw, circle,
+    line width=4pt, color=white,
+    minimum width=\wd\picbox,minimum height=\ht\picbox,
+    path picture={ \node at (path picture bounding box.center)
+        {\usebox{\picbox}};}]
+  {};
+}
 
 %contactsubviews
 
+\newcommand{\linkedinview}
+           {\href{\@linkedinaccount}{\faLinkedinSquare\ \footnotesize linkedin}}
+\newcommand{\githubview}
+           {\href{\@githubaccount}{\faGithub\ \footnotesize github}}
+\newcommand{\gitlabview}
+           {\href{\@gitlabaccount}{\faGitlab\ \footnotesize gitlab}}
 
-\newcommand{\linkedinview}{\href{\@linkedinaccount}{\faLinkedinSquare\ \footnotesize linkedin}}
-\newcommand{\githubview}{\href{\@githubaccount}{\faGithub\ \footnotesize github}}
-\newcommand{\gitlabview}{\href{\@gitlabaccount}{\faGitlab\ \footnotesize gitlab}}
+\newcommand{\name}{{\large \@firstname \ \textsc{\@lastname}}}
 
-\newcommand{\name}{%
-  {\large \@firstname \ \textsc{\@lastname}}
-}
-
-\newcommand{\contact}{%
-  {\small \@address  \cps \@mobile \\ \@mail%
-      \\%
+\newcommand{\contact}{
+  {\small \@address  \cps \@mobile \\ \@mail \\
       \linkedinview \cps \githubview \cps \gitlabview \\
-    } %
+  }
 }
 
 % Covverletterview
@@ -106,22 +103,22 @@
   \end{tabular}
 }
 
-
 % Helper commands
 
-\newcommand\ruleafter[1]{#1~{\color{black!60!\@themecolor}\hrulefill}} % a trick to put the line with <before> parameter in \titleformat
+\newcommand\ruleafter[1]{#1~{\color{black!60!\@themecolor}\hrulefill}}
 
 %colorfulpipeseperator
 
 \newcommand{\cps}{{\color{\@themecolor} \quad\textbar\quad}}
-\newcommand{\cpshalf}{{\color{\@themecolor} \hspace{0.2em}\textbar\hspace{0.2em}}}
+\newcommand{\cpshalf}
+           {{\color{\@themecolor} \hspace{0.2em}\textbar\hspace{0.2em}}}
 
 \newcommand{\coloredbullet}{{\color{\@themecolor} \textbullet}}
 
 % Edit section styles
 
 \titleformat{\section}      % Customise the \section command
-{\Large\bfseries\scshape\raggedright\color{\@themecolor}} % Make the \section headers large (\Large),
+{\Large\bfseries\scshape\raggedright\color{\@themecolor}}
 % small capitals (\scshape) and left aligned (\raggedright)
 {}{0em}
 {\ruleafter}
@@ -130,44 +127,46 @@
 
 % Textview commands
 
-\newcommand{\experience}[2]{%
-  \mbox { \hspace{1em} \scshape \textbf{#1} }%
+\newcommand{\experience}[2]{
+  \mbox { \hspace{1em} \scshape \textbf{#1} }
 }
 
 \newcommand{\datetext}[1]{%
   {\itshape  \footnotesize \mdseries  \color{black!60!\@themecolor} #1 }
 }
 
-\newcommand{\datedexperience}[2]{%
-  \begin{small} \mbox { \hspace{1em} \scshape \textbf{#1} } \end{small} \hfill \datetext{#2}\\[0.05cm] %
+\newcommand{\datedexperience}[2]{
+  \begin{small}
+    \mbox { \hspace{1em} \scshape \textbf{#1} }
+  \end{small} \hfill \datetext{#2}\\[0.05cm]
 }
 
-\newcommand{\explanation}[1]{%
+\newcommand{\explanation}[1]{
   \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.05cm]
 }
 
-\newcommand{\explanationdetail}[1]{%
+\newcommand{\explanationdetail}[1]{
   \indent \begin{minipage}{0.96\linewidth} \footnotesize #1 \end{minipage} \\[0.1cm]
 }
 
-\newcommand{\itemwithtext}[1]{%
+\newcommand{\itemwithtext}[1]{
   \begin{minipage}{\linewidth} \footnotesize \item #1 \end{minipage}
 }
 
-\newcommand{\addblocktext}[2]{%
+\newcommand{\addblocktext}[2]{
   \section{#1}
   \indent \explanationdetail{\hspace{4ex} #2}
 }
 
-\newcommand\createskill[2]{%
+\newcommand\createskill[2]{
   \textsc{\textbf{#1}} & #2
 }
 
-\newcommand\createtablecontent[1]{%
+\newcommand\createtablecontent[1]{
   \foreach \x [count=\xi] in {#1} {\ifthenelse{\xi=1}{\x}{\\ \x}}
 }
 
-\newcommand\createskills[1]{%
+\newcommand\createskills[1]{
   \explanationdetail{
     \begin{tabular}{rl}
       \makeatletter
@@ -177,7 +176,7 @@
   }
 }
 
-\newcommand\createbullets[1]{%
+\newcommand\createbullets[1]{
   \renewcommand{\labelitemi}{\coloredbullet}
   \begin{itemize}
     \makeatletter
@@ -186,8 +185,9 @@
   \end{itemize}
 }
 
-\newcommand\createfootnote{%
+\newcommand\createfootnote{
   \renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
   \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
-  \let\thefootnote\relax\footnote{\today\ / \href{https://github.com/marckit/cv-marckit}{source code}}}
+  \let\thefootnote\relax
+  \footnote{\today\ / \href{https://github.com/marckit/cv-marckit}{source code}}}
 
