@@ -1,0 +1,8 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: thomasweise/docker-texlive-full
+     steps:
+       - checkout
+       - run: make

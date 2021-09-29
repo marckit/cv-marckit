@@ -1,0 +1,7 @@
+# Tex
+*.aux
+*.log
+*.out
+
+# Ignore created pdf
+src/*.pdf
