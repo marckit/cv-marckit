@@ -96,7 +96,7 @@
 \newcommand\coverletter[1]{
   \\  \coverlettersubview
   \section{} \vspace{1ex}
-  \textbf{ Dear \@contactperson, \\[0.1cm]}
+  \textbf{ Cher \@contactperson, \\[0.1cm]}
   #1
 }
 
@@ -193,5 +193,6 @@
   \renewcommand{\footnotesize}{\fontsize{7pt}{11pt}\selectfont}
   \renewcommand\footnoterule{\rule{0.3\linewidth}{0.5pt}}
   \let\thefootnote\relax
-  \footnote{\today\ / \href{https://github.com/marckit/cv-marckit}{source code}}}
+  \footnote{\today\ / \href{https://github.com/marckit/cv-marckit/tree/french}
+                                                                {source code}}}
 
