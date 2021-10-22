@@ -29,6 +29,7 @@
 \newcommand*{\setmail}[1]{\def\@mail{#1}}
 \newcommand*{\setthemecolor}[1]{\def\@themecolor{#1}}
 \newcommand*{\setlinkedinaccount}[1]{\def\@linkedinaccount{#1}}
+\newcommand*{\setwebsite}[1]{\def\@website{#1}}
 \newcommand*{\setgithubaccount}[1]{\def\@githubaccount{#1}}
 \newcommand*{\setgitlabaccount}[1]{\def\@gitlabaccount{#1}}
 
@@ -74,6 +75,8 @@
 
 \newcommand{\linkedinview}
            {\href{\@linkedinaccount}{\faLinkedinSquare\ \footnotesize linkedin}}
+\newcommand{\websiteview}
+           {\href{\@website}{\faGlobe\ \footnotesize website}}
 \newcommand{\githubview}
            {\href{\@githubaccount}{\faGithub\ \footnotesize github}}
 \newcommand{\gitlabview}
@@ -82,8 +85,9 @@
 \newcommand{\name}{{\large \@firstname \ \textsc{\@lastname}}}
 
 \newcommand{\contact}{
-  {\small \@address  \cps \@mobile \\ \@mail \\
-      \linkedinview \cps \githubview \cps \gitlabview \\
+  {\small \@address  \cps \@mobile \\ \@mail \\[0.1cm]
+      \linkedinview \cps  \githubview \\[0.1cm]
+      \websiteview \cps \gitlabview \\
   }
 }
 
