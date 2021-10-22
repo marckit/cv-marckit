@@ -1,7 +1,7 @@
 \documentclass{marckit_cv}
 
 \setname{Marc-André}{Labelle}
-\setaddress{Montreal}
+\setaddress{Montreal/Quebec}
 \setmobile{514-568-6836}
 \setmail{marckitmail@gmail.com}
 \setlinkedinaccount{https://www.linkedin.com/in/marckit/}
@@ -16,93 +16,96 @@
   \vspace{1ex}
   %Sections
   %
-  % Experience
-  \section{Experience}
-  %
-  \datedexperience{CGI - Transportation and logistics}{Since April 2022}
-  \explanation{Website automation consultant}
-  \explanationdetail{\coloredbullet\
-    \href{http://www.cgi.com/en/transportation-logistics}
-         {Playwright, Atlassian suite, REST API, AWS pipeline}\par}
-  %
-  \datedexperience{CGI - Automation bootcamp}{January 2022 - March 2022}
-  \explanation{New graduates bootcamp}
-  \explanationdetail{\coloredbullet\
-    \href{http://www.cgi.com}
-         {Selenium, Cypress, Playwright}\par}
-  %
-  %
   %Education
-  \section{Education}
+  \section{Éducation}
   \datedexperience{UQAM (Université du Québec À Montréal)}
-                  {Obtained on September 2021}
-  \explanation{B.S. in Computer Science and Engineering}
+                  {Obtenu en Septembre 2021}
+  \explanation{Baccalauréat en informatique et génie logiciel}
   \explanationdetail{\coloredbullet\
     \href{https://etudier.uqam.ca/programme?code=7416}
-    {Baccalauréat en informatique et génie logiciel}
+         {Il s’agit d’études informatiques dont les langages étudiés
+                                            sont principalement Java, C et C++}
   }
   %
-  \datedexperience{Laval University}{Obtained on May 2019}
-  \explanation{B.E. in Food Engineering}
+  \datedexperience{Université Laval}{Obtenu en Mai 2019}
+  \explanation{Baccalauréat en génie alimentaire}
   \explanationdetail{\coloredbullet\
     \href{https://www.ulaval.ca/les-etudes/programmes/repertoire/details/baccalaureat-en-genie-alimentaire-b-ing.html}
-    {Baccalauréat en génie alimentaire}\par
+    {Combinaison de notions de génie chimique et de scienece
+                          \& technologie des aliments en génie alimentaire}\par
   }
-  % Skills
-  \section{Skills}
+  % Experience
+  \section{Expérience}
   %
-  \newcommand{\skillone}{\createskill{Programming Languages}
-    { Python \cpshalf Java \cpshalf Javascript \cpshalf Typescript
-      \cpshalf Bash \cpshalf C \cpshalf C++ \cpshalf C\#
+  \datedexperience{Entologik}{Août 2020 - Avril 2021}
+  \explanation{Responsable technologique et alimentaire}
+  \explanationdetail{\coloredbullet\
+    \href{http://www.entologik.com}
+         {Croissance de grillons, petit programme python
+                                           et maintenance des ordinateurs}\par}
+  %
+  \datedexperience{Happy Yak}{Mai 2019 - Juillet 2019}
+  \explanation{\href{http://www.happyyak.ca/}
+                    {Stagiaire en production alimentaire}}
+  %
+  \datedexperience{Conagra Brands}{August 2015 - November 2015}
+  \explanation{\href{http://www.conagrabrands.ca/fr/marques}{Sanitation}}
+  %
+  % Skills
+  \section{Compétences}
+  %
+  \newcommand{\skillone}{\createskill{Langages de programmation}
+    {\textbf{\emph{Expérimenté:}} Python \cpshalf Java \cpshalf
+     \textbf{\emph{Familié:}} Javascript \cpshalf Bash
+      \cpshalf Java \cpshalf C \cpshalf C++ \cpshalf MATLAB
     }
   }
   %
-  \newcommand{\skilltwo}{\createskill{Databases and APIs}
-    {SQLite \cpshalf MySQL \cpshalf MongoDB \cpshalf Express 
-    \cpshalf tRPC \cpshalf SoapAPI \cpshalf REST API}}
+  \newcommand{\skilltwo}{\createskill{Outils de développement}
+                                 {GIT \cpshalf CLI \cpshalf Méthodologie Agile
+                                                 \cpshalf Cylce de vie DevOps}}
   %
-  \newcommand{\skillthree}{\createskill{Behaviour Driven Development}
-    {Gherkin \cpshalf Cucumber \cpshalf XRAY}
-  }
+  \newcommand{\skillthree}{\createskill{Déploiement d'interface}
+                                        {React \cpshalf Angular \cpshalf Kivy}}
   %
-  \newcommand{\skillfour}{\createskill{Frameworks \& Libraries}
-                                 {React \cpshalf Angular \cpshalf Spring Boot \cpshalf Django}}
+  \newcommand{\skillfour}{\createskill{Interface utilisateur}
+                    {Tailwind \cpshalf Bootstrap \cpshalf Angular Material UI}}
   %
-  \newcommand{\skillfive}{\createskill{Software Development}
-    {GIT \cpshalf AWS \cpshalf Atlassian Suite}}
+  \newcommand{\skillfive}{\createskill{Langues}
+    {\textbf{\emph{Maternelle:}} Français \cpshalf
+     \textbf{\emph{Courante:}} Anglais \cpshalf
+     \textbf{\emph{Débutant:}} Espagnol}}
   %
-  \newcommand{\skillsix}{\createskill{Languages}
-    {\textbf{\emph{Native:}} French \cpshalf \textbf{\emph{Fluent:}} English
-                                    \cpshalf \textbf{\emph{Beginner:}} Spanish}}
-  %
-  \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive, \skillsix}
+  \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive}
   %
   % Other Experiences
-  \section{Other Experiences}
-  \datedexperience{\href{http://www.dynacare.ca}
-                                       {Dynacare}}
-                  {Airport on site support}
-  \datedexperience{\href{http://www.entologik.com}
-                                       {Entologik}}
-                  {Cricket Farming}
-  \datedexperience{\href{https://happyyak.ca/en/}
-                                      {Happy Yak}}
-                  {Food process}
-  \datedexperience{\href{http://www.conagrabrands.ca/en/brands}
-                                               {Conagra Brands}}
-                  {Sanitation}
+  \section{Autres expériences}
   \datedexperience{\href{https://www.instagram.com/parcelles.austin/}
                                                           {Parcelles}}
-                  {Farming}
-  \datedexperience{\href{https://www.tableedeschefs.org/en/}
+                  {Agriculture}
+  \datedexperience{\href{https://www.tableedeschefs.org/}
                                        {La tablée des chefs}}
-                  {Kitchen cook}
+                  {Cuisinier}
   \datedexperience{\href{https://www.lanticrogers.com/}
                                          {Sucre Lantic}}
-                  {ISO and HACCP standards}
-  \datedexperience{\href{https://www.dominiongrimm.ca/en/home.html}
+                  {Vérification de l'application des normes ISO et HACCP}
+  \datedexperience{\href{https://www.dominiongrimm.ca/fr/home.html}
                                                 {Dominion et Grimm}}
-                  {Equipement testing}
+                  {Testes d'équipements}
+
+  % Experience
+  \section{Passe-temps}
+  \newcommand{\extraone}{%
+    \emph{Musique}: Joue guitar, piano, basse
+  }
+  \newcommand{\extratwo}{%
+    \emph{Sports}: Hockey, Tennis, Yoga, ect.
+  }
+
+  \newcommand{\listofextras}{\extraone, \extratwo}
+
+  \createbullets{\listofextras}
+
   %Footnote
   \createfootnote
 \end{document}
