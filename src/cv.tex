@@ -1,7 +1,7 @@
 \documentclass{marckit_cv}
 
 \setname{Marc-André}{Labelle}
-\setaddress{Montreal/Quebec}
+\setaddress{Montréal}
 \setmobile{514-568-6836}
 \setmail{marckitmail@gmail.com}
 \setlinkedinaccount{https://www.linkedin.com/in/marckit/}
@@ -15,6 +15,21 @@
   \headerview
   \vspace{1ex}
   %Sections
+  %
+  % Experience
+  \section{Expérience}
+  %
+  \datedexperience{CGI - Transport et logistique}{Depuis Avril 2021}
+  \explanation{Responsable technologique et alimentaire}
+  \explanationdetail{\coloredbullet\
+    \href{https://www.cgi.com/fr/transport-et-logistique}
+         {Condeceptjs, Atlassian suite, AWS pipeline}\par}
+  %
+  \datedexperience{CGI - Formation en tests automatisées}{January 2022 - March 2022}
+  \explanation{Intégration des nouveaux diplômés}
+  \explanationdetail{\coloredbullet\
+    \href{http://www.cgi.com}
+         {Selenium, Cypress, Playright}\par}
   %
   %Education
   \section{Éducation}
@@ -34,52 +49,48 @@
     {Combinaison de notions de génie chimique et de scienece
                           \& technologie des aliments en génie alimentaire}\par
   }
-  % Experience
-  \section{Expérience}
-  %
-  \datedexperience{Entologik}{Août 2020 - Avril 2021}
-  \explanation{Responsable technologique et alimentaire}
-  \explanationdetail{\coloredbullet\
-    \href{http://www.entologik.com}
-         {Croissance de grillons, petit programme python
-                                           et maintenance des ordinateurs}\par}
-  %
-  \datedexperience{Happy Yak}{Mai 2019 - Juillet 2019}
-  \explanation{\href{http://www.happyyak.ca/}
-                    {Stagiaire en production alimentaire}}
-  %
-  \datedexperience{Conagra Brands}{August 2015 - November 2015}
-  \explanation{\href{http://www.conagrabrands.ca/fr/marques}{Sanitation}}
   %
   % Skills
   \section{Compétences}
   %
   \newcommand{\skillone}{\createskill{Langages de programmation}
-    {\textbf{\emph{Expérimenté:}} Python \cpshalf Java \cpshalf
-     \textbf{\emph{Familié:}} Javascript \cpshalf Bash
-      \cpshalf Java \cpshalf C \cpshalf C++ \cpshalf MATLAB
+    { Python \cpshalf Java \cpshalf Javascript \cpshalf Typescript
+      \cpshalf Bash \cpshalf C \cpshalf C++ \cpshalf C\#
     }
   }
   %
-  \newcommand{\skilltwo}{\createskill{Outils de développement}
-                                 {GIT \cpshalf CLI \cpshalf Méthodologie Agile
-                                                 \cpshalf Cylce de vie DevOps}}
+  \newcommand{\skilltwo}{\createskill{Bases de données et interfaces applicatives}
+    {PostgreSQL \cpshalf SQLite \cpshalf MySQL \cpshalf MongoDB 
+    \cpshalf Express \cpshalf tRPC }}
   %
-  \newcommand{\skillthree}{\createskill{Déploiement d'interface}
-                                        {React \cpshalf Angular \cpshalf Kivy}}
+  \newcommand{\skillthree}{\createskill{Programmation pilotée par le comportement}
+    {Gherkin \cpshalf Cucumber}
+  }
   %
-  \newcommand{\skillfour}{\createskill{Interface utilisateur}
-                    {Tailwind \cpshalf Bootstrap \cpshalf Angular Material UI}}
+  \newcommand{\skillfour}{\createskill{Infrastructures logiciels}
+   {React \cpshalf Angular \cpshalf Spring Boot \cpshalf Django}}
   %
-  \newcommand{\skillfive}{\createskill{Langues}
+  \newcommand{\skillfive}{\createskill{Développement et déploiement de logiciel}
+    {GIT \cpshalf AWS \cpshalf Atlassian Suite}}
+  %
+  \newcommand{\skillsix}{\createskill{Langues}
     {\textbf{\emph{Maternelle:}} Français \cpshalf
      \textbf{\emph{Courante:}} Anglais \cpshalf
      \textbf{\emph{Débutant:}} Espagnol}}
   %
-  \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive}
+  \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive, \skillsix}
   %
   % Other Experiences
   \section{Autres expériences}
+  \datedexperience{\href{http://www.dynacare.ca}
+                                       {Dynacare}}
+                  {Support technique sur place}
+  \datedexperience{\href{http://www.entologik.com}
+                                       {Entologik}}
+                  {Élevage de grillons}
+  \datedexperience{\href{https://happyyak.ca/fr/}
+                                      {Happy Yak}}
+                  {Procédés agroalimentaires}
   \datedexperience{\href{https://www.instagram.com/parcelles.austin/}
                                                           {Parcelles}}
                   {Agriculture}
@@ -92,20 +103,6 @@
   \datedexperience{\href{https://www.dominiongrimm.ca/fr/home.html}
                                                 {Dominion et Grimm}}
                   {Testes d'équipements}
-
-  % Experience
-  \section{Passe-temps}
-  \newcommand{\extraone}{%
-    \emph{Musique}: Joue guitar, piano, basse
-  }
-  \newcommand{\extratwo}{%
-    \emph{Sports}: Hockey, Tennis, Yoga, ect.
-  }
-
-  \newcommand{\listofextras}{\extraone, \extratwo}
-
-  \createbullets{\listofextras}
-
   %Footnote
   \createfootnote
 \end{document}
