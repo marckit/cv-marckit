@@ -13,7 +13,7 @@
 \RequirePackage{fontspec}
 \RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry}
 \RequirePackage{hyperref}
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 \RequirePackage{mfirstuc}
 \RequirePackage{ifthen}
 \RequirePackage{lipsum}
@@ -74,7 +74,7 @@
 %contactsubviews
 
 \newcommand{\linkedinview}
-           {\href{\@linkedinaccount}{\faLinkedinSquare\ \footnotesize linkedin}}
+           {\href{\@linkedinaccount}{\faLinkedin\ \footnotesize linkedin}}
 \newcommand{\websiteview}
            {\href{\@website}{\faGlobe\ \footnotesize website}}
 \newcommand{\githubview}
